@@ -1,0 +1,29 @@
+---
+title: "Make non ActiveRecord classes renderable"
+date: 2016-08-22T18:00:00-03:00
+draft: false
+tags: ["ruby", "rails"]
+categories: ["ruby", "rails"]
+---
+
+In order to render a new partial without being a "Rails" object we can rewrite the method `to_partial_path` to do so:
+
+```ruby
+class Timeline
+  def to_partial_path
+    "timeline/timeline"
+  end
+end
+```
+
+Now we just need to create the view in `app/views/timeline/_timeline.htm.erb` and it's going to work like a charm!
+
+or, we can extend the `ActiveModel::Naming` to make it works as well:
+
+```ruby
+class Timeline
+  extend ActiveModel::Naming
+end
+```
+
+<q>Happy coding!</q>

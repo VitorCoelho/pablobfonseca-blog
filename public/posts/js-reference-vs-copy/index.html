@@ -1,0 +1,184 @@
+<!doctype html><html lang=en><head><title>JS Reference vs Copy · Pablo Fonseca</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Pablo Fonseca"><meta name=description content='It&rsquo;s been a while since I don&rsquo;t write anything here, but here we go :)
+I have been studying a lot of JS lately, and I bumped into some real nice tips,
+it can be simple for those who already know JS but for me it was new and really
+cool.
+In Javascript if you assign the value of a variable to another variable like
+this:
+
+
+1
+2
+3
+4
+5
+
+
+let name = "Pablo";
+let name2 = name;
+name2 = "Peter";
+
+console.log(name2);
+
+
+This code above will return &lsquo;Pablo&rsquo; or &lsquo;Peter&rsquo;? It will return &lsquo;Peter&rsquo; because
+we re-assign the value of the variable name2.'><meta name=keywords content="blog,developer,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="JS Reference vs Copy"><meta name=twitter:description content='It’s been a while since I don’t write anything here, but here we go :)
+I have been studying a lot of JS lately, and I bumped into some real nice tips, it can be simple for those who already know JS but for me it was new and really cool.
+In Javascript if you assign the value of a variable to another variable like this:
+1 2 3 4 5 let name = "Pablo"; let name2 = name; name2 = "Peter"; console.log(name2); This code above will return ‘Pablo’ or ‘Peter’? It will return ‘Peter’ because we re-assign the value of the variable name2.'><meta property="og:url" content="https://pablobfonseca.github.io/posts/js-reference-vs-copy/"><meta property="og:site_name" content="Pablo Fonseca"><meta property="og:title" content="JS Reference vs Copy"><meta property="og:description" content='It’s been a while since I don’t write anything here, but here we go :)
+I have been studying a lot of JS lately, and I bumped into some real nice tips, it can be simple for those who already know JS but for me it was new and really cool.
+In Javascript if you assign the value of a variable to another variable like this:
+1 2 3 4 5 let name = "Pablo"; let name2 = name; name2 = "Peter"; console.log(name2); This code above will return ‘Pablo’ or ‘Peter’? It will return ‘Peter’ because we re-assign the value of the variable name2.'><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2019-04-01T15:05:01-03:00"><meta property="article:modified_time" content="2019-04-01T15:05:01-03:00"><meta property="article:tag" content="Javascript"><link rel=canonical href=https://pablobfonseca.github.io/posts/js-reference-vs-copy/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.6445a802b9389c9660e1b07b724dcf5718b1065ed2d71b4eeaf981cc7cc5fc46.css integrity="sha256-ZEWoArk4nJZg4bB7ck3PVxixBl7S1xtO6vmBzHzF/EY=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-dark"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://pablobfonseca.github.io/>Pablo Fonseca
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/about/>About</a></li><li class=navigation-item><a class=navigation-link href=/posts/>Posts</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://pablobfonseca.github.io/posts/js-reference-vs-copy/>JS Reference vs Copy</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa-solid fa-calendar" aria-hidden=true></i>
+<time datetime=2019-04-01T15:05:01-03:00>April 1, 2019
+</time></span><span class=reading-time><i class="fa-solid fa-clock" aria-hidden=true></i>
+3-minute read</span></div><div class=categories><i class="fa-solid fa-folder" aria-hidden=true></i>
+<a href=/categories/javascript/>Javascript</a></div><div class=tags><i class="fa-solid fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/javascript/>Javascript</a></span></div></div></header><div class=post-content><p>It&rsquo;s been a while since I don&rsquo;t write anything here, but here we go :)</p><p>I have been studying a lot of JS lately, and I bumped into some real nice tips,
+it can be simple for those who already know JS but for me it was new and really
+cool.</p><p>In Javascript if you assign the value of a variable to another variable like
+this:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kd>let</span> <span class=nx>name</span> <span class=o>=</span> <span class=s2>&#34;Pablo&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nx>name2</span> <span class=o>=</span> <span class=nx>name</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=nx>name2</span> <span class=o>=</span> <span class=s2>&#34;Peter&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>name2</span><span class=p>);</span>
+</span></span></code></pre></td></tr></table></div></div><p>This code above will return &lsquo;Pablo&rsquo; or &lsquo;Peter&rsquo;? It will return &lsquo;Peter&rsquo; because
+we re-assign the value of the variable <code>name2</code>.</p><p>What about arrays and objects?</p><h3 id=arrays>Arrays
+<a class=heading-link href=#arrays><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kr>const</span> <span class=nx>languages</span> <span class=o>=</span> <span class=p>[</span><span class=s2>&#34;Javascript&#34;</span><span class=p>,</span> <span class=s2>&#34;Ruby&#34;</span><span class=p>,</span> <span class=s2>&#34;Python&#34;</span><span class=p>,</span> <span class=s2>&#34;PHP&#34;</span><span class=p>];</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>languages2</span> <span class=o>=</span> <span class=nx>languages</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=nx>languages2</span><span class=p>[</span><span class=mi>3</span><span class=p>]</span> <span class=o>=</span> <span class=s2>&#34;Elixir&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>languages2</span><span class=p>);</span>
+</span></span></code></pre></td></tr></table></div></div><p>What about now? If we check the value of <code>languages</code> and <code>languages2</code> now we
+will see that the value has changed in both arrays:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>languages</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=c1>// [&#34;Javascript&#34;, &#34;Ruby&#34;, &#34;Python&#34;, &#34;Elixir&#34;]
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>languages2</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=c1>// [&#34;Javascript&#34;, &#34;Ruby&#34;, &#34;Python&#34;, &#34;Elixir&#34;]
+</span></span></span></code></pre></td></tr></table></div></div><p>This happens because <code>language2</code> is an array reference, not an array copy, they
+point to the same array.</p><p>We can fix this using doing a copy intead:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kr>const</span> <span class=nx>languages</span> <span class=o>=</span> <span class=p>[</span><span class=s2>&#34;Javascript&#34;</span><span class=p>,</span> <span class=s2>&#34;Ruby&#34;</span><span class=p>,</span> <span class=s2>&#34;Python&#34;</span><span class=p>,</span> <span class=s2>&#34;PHP&#34;</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// One way
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>const</span> <span class=nx>languages2</span> <span class=o>=</span> <span class=nx>languages</span><span class=p>.</span><span class=nx>slice</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Creating a new array and concat the old one in
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>const</span> <span class=nx>languages2</span> <span class=o>=</span> <span class=p>[].</span><span class=nx>concat</span><span class=p>(</span><span class=nx>languages</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Using the new ES6 Spread
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>const</span> <span class=nx>languages2</span> <span class=o>=</span> <span class=p>[...</span><span class=nx>languages</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// or using Array.from
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>const</span> <span class=nx>languages2</span> <span class=o>=</span> <span class=nb>Array</span><span class=p>.</span><span class=nx>from</span><span class=p>(</span><span class=nx>languages</span><span class=p>);</span>
+</span></span></code></pre></td></tr></table></div></div><p>Now we have a copy instead of a reference, every time we update the value in
+<code>languages2</code> the array <code>languages</code> will remain the same.</p><h3 id=objects>Objects
+<a class=heading-link href=#objects><i class="fa-solid fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kr>const</span> <span class=nx>person</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>name</span><span class=o>:</span> <span class=s2>&#34;Pablo&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nx>age</span><span class=o>:</span> <span class=mi>24</span><span class=p>,</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>person2</span> <span class=o>=</span> <span class=nx>person</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>person2</span><span class=p>.</span><span class=nx>name</span> <span class=o>=</span> <span class=s2>&#34;Peter&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>person</span><span class=p>);</span>
+</span></span></code></pre></td></tr></table></div></div><p>This will behave the same way as arrays, in this case, <code>person</code> will have the
+property <code>name</code> updated by &ldquo;Peter&rdquo; because it&rsquo;s a reference and not a copy.</p><p>We can fix that by doing the following:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=c1>// Using Object.assign()
+</span></span></span><span class=line><span class=cl><span class=c1>// The first argument will be empty Object, the second will be the object and  the third will be new properties or existent properties we want to change
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>const</span> <span class=nx>person2</span> <span class=o>=</span> <span class=nb>Object</span><span class=p>.</span><span class=nx>assign</span><span class=p>({},</span> <span class=nx>person</span><span class=p>,</span> <span class=p>{</span> <span class=nx>name</span><span class=o>:</span> <span class=s2>&#34;Peter&#34;</span> <span class=p>});</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// ES6 Spread
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>const</span> <span class=nx>person2</span> <span class=o>=</span> <span class=p>{</span> <span class=p>...</span><span class=nx>person</span> <span class=p>};</span>
+</span></span></code></pre></td></tr></table></div></div><p>There&rsquo;s a little problem though, both <code>Object.assign</code> and ES6 Spread will do a
+shallow copy of the object, what does that mean? it means that it will copy
+only 1 level deep, check this out:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kr>const</span> <span class=nx>pablo</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>name</span><span class=o>:</span> <span class=s2>&#34;Pablo&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nx>age</span><span class=o>:</span> <span class=mi>24</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nx>social</span><span class=o>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>twitter</span><span class=o>:</span> <span class=s2>&#34;@pablobfonseca&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nx>instagram</span><span class=o>:</span> <span class=s2>&#34;@pablobfonseca&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nx>github</span><span class=o>:</span> <span class=s2>&#34;@pablobfonseca&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=p>},</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>peter</span> <span class=o>=</span> <span class=nb>Object</span><span class=p>.</span><span class=nx>assign</span><span class=p>({},</span> <span class=nx>pablo</span><span class=p>,</span> <span class=p>{</span> <span class=nx>name</span><span class=o>:</span> <span class=s2>&#34;Peter&#34;</span> <span class=p>});</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// If we change the value of `social` of the object `peter` we will also change the value on `pablo`
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=nx>peter</span><span class=p>.</span><span class=nx>social</span><span class=p>.</span><span class=nx>twitter</span> <span class=o>=</span> <span class=s2>&#34;@peterparker&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>pablo</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=c1>// {name: &#34;Pablo&#34;, age: 24, social: {twitter: &#34;@peterparker&#34;}}
+</span></span></span></code></pre></td></tr></table></div></div><p>We can avoid this by doing a deep clone, but you should always think twice
+before using it.</p><p>A workaround you can do is to convert the object to string and then convert it
+back to object by using <code>JSON.parse</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=line><span class=cl><span class=kr>const</span> <span class=nx>peter</span> <span class=o>=</span> <span class=nx>JSON</span><span class=p>.</span><span class=nx>parse</span><span class=p>(</span><span class=nx>JSON</span><span class=p>.</span><span class=nx>stringify</span><span class=p>(</span><span class=nx>pablo</span><span class=p>));</span>
+</span></span><span class=line><span class=cl><span class=nx>peter</span><span class=p>.</span><span class=nx>social</span><span class=p>.</span><span class=nx>twitter</span> <span class=o>=</span> <span class=s2>&#34;@peterparker&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// Now the object pablo will remain the same
+</span></span></span></code></pre></td></tr></table></div></div><p>That&rsquo;s it for today! I hope you guys could learn anything from it :)</p><p>Happy coding!</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2016 -
+2025
+Pablo Fonseca
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.</section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script></body></html>

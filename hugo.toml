@@ -1,0 +1,91 @@
+baseURL = 'https://pablobfonseca.github.io/'
+languageCode = 'en-us'
+title = 'Pablo Fonseca'
+theme = 'coder'
+
+[params]
+    # Include FontAwesome
+    include_font_awesome = true
+    
+    author = 'Pablo Fonseca'
+    description = "If I had eight hours to chop down a tree, I'd spend six hours sharpening my ax."
+    keywords = 'blog,developer,personal'
+    
+    # Logo image. This is displayed in the navigation.
+    avatar = ''
+    
+    # Whether you want to display the rss icon
+    enableTwemoji = false
+    
+    # Color theme
+    # Available themes are 'default', 'github', 'dracula'  
+    colorScheme = 'dark'
+    hideColorSchemeToggle = false
+    
+    # Hide the footer credit
+    hideCopyright = false
+    hideCredits = false
+    
+    # Copyright year
+    since = 2016
+    
+    # Git Commit in Footer, uncomment the line below to enable it.
+    commit = false
+    
+    # RTL support
+    rtl = false
+    
+    # Specify alternative colors for the theme
+    # [params.colors]
+    # text = '#212529'
+    # background = '#fff'
+    # primary = '#007bff'
+    # secondary = '#f1f3f4'
+
+# Navigation
+[menu]
+    [[menu.main]]
+        name = "About"
+        weight = 1
+        url = "/about/"
+    [[menu.main]]
+        name = "Posts"
+        weight = 2
+        url = "/posts/"
+
+# Social
+[[params.social]]
+    name = "GitHub"
+    icon = "fab fa-github"
+    url = "https://github.com/pablobfonseca"
+    weight = 1
+
+[[params.social]]
+    name = "LinkedIn"
+    icon = "fab fa-linkedin"
+    url = "https://linkedin.com/in/pablobfonseca"
+    weight = 2
+
+[[params.social]]
+    name = "Twitter"
+    icon = "fab fa-twitter"
+    url = "https://twitter.com/pablobfonseca"
+    weight = 3
+
+[[params.social]]
+    name = "Email"
+    icon = "fas fa-envelope"
+    url = "mailto:pablofonseca777@gmail.com"
+    weight = 4
+
+# Markup settings
+[markup]
+    [markup.highlight]
+        codeFences = true
+        guessSyntax = true
+        lineNos = true
+        lineNumbersInTable = true
+        noClasses = false
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true

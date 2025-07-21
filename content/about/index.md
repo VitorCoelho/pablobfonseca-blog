@@ -1,0 +1,15 @@
+---
+title: "About"
+date: 2016-07-17
+draft: false
+---
+
+Hi!
+
+I'm a Brazilian Software Engineer, passionate about programming, vim/emacs evangelist, currently working as Ruby and Javascript Developer.
+
+I love to code and to learn new technologies.
+
+You can find more information on my [Linkedin](http://linkedin.com/in/pablobfonseca) and my [Github](https://github.com/pablobfonseca) 
+
+Feel free to [drop me a line](mailto:pablofonseca777@gmail.com)
