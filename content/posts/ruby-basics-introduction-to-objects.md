@@ -9,7 +9,7 @@ categories: ["ruby", "basics", "beginners"]
 ## Intro
 We're going to go through the basics of Ruby objects in these series of articles and try to cover all you need to know to get started with Ruby.
 
-Remeber that you can test the highlighted codes directly from your terminal
+Remember that you can test the highlighted codes directly from your terminal
 opening the IRB (Interactive Ruby Shell), to do so, just type this in yout
 terminal:
 ```
