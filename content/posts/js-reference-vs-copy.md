@@ -51,7 +51,7 @@ console.log(languages2);
 This happens because `language2` is an array reference, not an array copy, they
 point to the same array.
 
-We can fix this using doing a copy intead:
+We can fix this by doing a copy instead:
 
 ```javascript
 const languages = ["Javascript", "Ruby", "Python", "PHP"];
